@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jokes</title>
+</head>
+<body>
+
+    {% for joke in jokes %}
+
+          <div class="media-body">
+            <div class="article-metadata">
+
+              <small class="text-muted">ID: {{ joke.id }} </small>
+
+                {%if joke.categories%}
+                <small>{{joke.categories}}</small>
+                {%endif%}
+            </div>
+
+            <p class="article-content">Joke: {{ joke.joke }}</p>
+          </div>
+
+
+    {% endfor %}
+</body>
+</html>
